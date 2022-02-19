@@ -1,5 +1,8 @@
 import * as React from "react"
 import Banner from "./Component/Banner/Banner";
+import Benifit from "./Component/Benifit/Benifit";
+import Jamstack from "./Component/Jamstack/Jamstack";
+import Technologies from "./Component/Technologies/Technologies";
 import './Index.scss'
 
 // styles
@@ -18,6 +21,9 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <title>Home Page</title>
       <Banner />
+      <Jamstack />
+      <Benifit />
+      <Technologies />
     </main>
   )
 }

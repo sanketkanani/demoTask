@@ -1,0 +1,29 @@
+$off-white: #ffffffa6;
+
+.Benifit_section {
+  padding: 4.65rem 3.1rem;
+  .row {
+    max-width: 72.075rem;
+    margin: auto;
+    .title {
+      font-size: 14px;
+      color: $off-white;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1875rem;
+      margin-bottom: 2.325rem;
+    }
+    h2 {
+      font-size: 2.07474rem;
+    }
+    h4 {
+      font-size: 1.62671rem;
+      font-weight: 700;
+      margin: 1.55rem 0 1.1625rem;
+    }
+    p {
+      margin: 0 0 1.1625rem;
+      color: $off-white;
+    }
+  }
+}

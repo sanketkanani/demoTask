@@ -1,0 +1,179 @@
+$off-white: #ffffffa6;
+
+.Technologies_section {
+  background: #1e1528;
+  padding: 4.65rem 3.1rem;
+  border-radius: 16px;
+  .titleWrap {
+    h3 {
+      font-size: 14px;
+      color: #ffffffa6;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1875rem;
+      margin-bottom: 2.325rem;
+    }
+    h2 {
+      font-size: 2.07474rem;
+    }
+  }
+  .contentWrapper {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 940px;
+    margin: auto;
+    margin-top: 4.65rem;
+    .box_wraper {
+      display: flex;
+      flex-flow: column;
+      gap: 100px;
+      .skillwrapper {
+        position: relative;
+        &::after {
+          border: 2px dashed #1e1528;
+          opacity: 1;
+        }
+        &::before {
+          background: linear-gradient(180deg, #feac0e, #da3654 70%);
+          opacity: 0.4;
+        }
+        &::before,
+        &::after {
+          border-radius: 16px;
+          bottom: -1px;
+          content: "";
+          left: -1px;
+          position: absolute;
+          right: -1px;
+          top: -1px;
+        }
+        .skillwrapperborder {
+          background: #1e1528;
+          position: relative;
+          border-radius: 16px;
+          padding: 1.55rem 1.55rem 0;
+          z-index: 2;
+          & > h3 {
+            -webkit-text-fill-color: #0000;
+            background: linear-gradient(180deg, #feac0e, #da3654 70%);
+            -webkit-background-clip: text;
+            font-size: 0.875rem;
+            letter-spacing: 0.1875rem;
+            margin-bottom: 2.325rem;
+          }
+          .skill {
+            margin: 0 2.325rem 1.55rem;
+            position: relative;
+            a {
+              &:hover {
+                img {
+                  opacity: 1;
+                  transform: scale(1.05);
+                }
+              }
+              img {
+                filter: invert(1) grayscale(1);
+                transition: 0.2s;
+                margin: 0 0 1.1625rem;
+              }
+              .skillMaster {
+                align-items: center;
+                background: #da3654;
+                border-radius: 100%;
+                display: flex;
+                height: 24px;
+                justify-content: center;
+                position: absolute;
+                right: -34px;
+                top: calc(50% - 20px);
+                width: 24px;
+                &::before {
+                  content: "";
+                  position: relative;
+                  background-image: url("../../../images/Banner/B_.svg");
+                  background-size: cover;
+                  height: 11px;
+                  width: 12px;
+                  z-index: 2;
+                }
+                &:hover {
+                  .skillMastercontent {
+                    display: block;
+                  }
+                }
+                .skillMastercontent {
+                  background: #da3654;
+                  border-radius: 16px;
+                  color: #fff;
+                  display: none;
+                  font-size: 13px;
+                  font-weight: 600;
+                  height: 24px;
+                  left: 2px;
+                  line-height: 24px;
+                  padding: 0 8px 0 22px;
+                  position: absolute;
+                  text-transform: uppercase;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+      .boxanimation {
+        display: flex;
+        justify-content: center;
+        margin-top: -40px;
+        opacity: 0.6;
+        width: 100%;
+        color: #1e1528;
+        .boxWrapper {
+          animation-delay: 1s;
+          animation: identifier 4.2s cubic-bezier(0.2, 1, 0.2, 1) infinite;
+          opacity: 0;
+          position: absolute;
+          will-change: opacity, transform;
+          &:first-child {
+            animation-delay: 1s;
+          }
+          &:nth-child(2) {
+            animation-delay: 2.4s;
+          }
+          &:nth-child(3) {
+            animation-delay: 3.8s;
+          }
+          img {
+            border-style: none;
+            max-width: 100%;
+            padding: 0;
+            margin: 0 0 1.1625rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes identifier {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+    z-index: 10;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    transform: translate(0);
+    z-index: 1;
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+}
