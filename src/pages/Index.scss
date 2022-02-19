@@ -1,0 +1,53 @@
+// ----------Font Link------------
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Alfa+Slab+One&family=Comfortaa:wght@300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rowdies&family=Saira+Condensed:wght@100&display=swap");
+
+.btn-primary {
+  font-size: 1.125rem;
+  padding: 0.8611rem 1.55rem 1.0333rem;
+  border: 0;
+  border-radius: 28px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  min-width: 9rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  background: linear-gradient(90deg, #da3654 0, #eb5295);
+  position: relative;
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      transform: scale(1.05);
+    }
+  }
+  &::after {
+    box-shadow: 0 0.3px 1.4px rgb(218 54 84 / 11%),
+      0 0.9px 3.5px rgb(218 54 84 / 16%), 0 2.2px 7.1px rgb(218 54 84 / 20%),
+      0 5px 14.6px rgb(218 54 84 / 24%), 0 20px 40px #da365459;
+    opacity: 0;
+  }
+  &::after,
+  &::before {
+    content: "";
+    backface-visibility: hidden;
+    background: linear-gradient(90deg, #da3654 0, #eb5295);
+    border-radius: 28px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateZ(0) scale(0.9999);
+    transform-style: preserve-3d;
+    transition: all 0.3s cubic-bezier(0, 0.89, 0.44, 1);
+    z-index: -1;
+  }
+  &:focus {
+    box-shadow: none;
+    border: none;
+  }
+}
